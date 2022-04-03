@@ -2,13 +2,13 @@ import NavBar from "components/NavBar/NavBar";
 import "./styles.css";
 import { ReactComponent as MainImage } from "assets/images/main-image.svg";
 import ButtonIcon from "components/ButtonIcon";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
     <>
-      <NavBar />
       <div className="home-container">
-        <div className="home-card">
+        <div className="base-card home-card">
           <div className="home-content-container">
             <div>
               <h1>Conheça o melhor catálogo de produtos</h1>
@@ -17,7 +17,9 @@ export default function Home() {
                 mercado.
               </p>
             </div>
-            <ButtonIcon />
+            <Link to="/products">
+              <ButtonIcon />
+            </Link>
           </div>
           <div className="home-image-container">
             <MainImage />
